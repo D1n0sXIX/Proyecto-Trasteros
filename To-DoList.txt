@@ -1,26 +1,30 @@
 Base de Datos:
-    Tabla Clientes:
-        - Id
-        - Nombre
-        - Apellidos
-        - DNI
-        - Telefono
-        - Direccion
-        - Localidad
-        - Provincia
-        - Codigo Postal
-        - Trastero Asignado
-        - Comentarios extra
-        - Id Contrato
+    Tabla Cliente:
+        - Id (int, primary key, not Null)
+        - Nombre (String, not Null)
+        - Apellidos (String, not Null)
+        - DNI (String, not Null)
+        - Telefono (long int, not Null)
+        - Direccion (String, not Null)
+        - Localidad (String)
+        - Provincia (String)
+        - Codigo Postal (long int)
+        - Comentarios extra (String)
     Tabla Trastero
-        - Num Trastero
-        - Disponibilidad
-        - Precio
-    Tabla Pagos
-        - Fecha del contrato
-        - Renta a pagar
-        - Metodo de pago
+        - Id Trastero (int, primary key, not Null)
+        - Disponibilidad (enum, not Null) (Disponible, Ocupado, Mantenimiento)
+    Tabla Pago
+        - Id del pago (int, primary key, not Null)
+        - Fecha del pago (date)
+        - Renta a pagar (deciaml, not Null)
+        - Metodo de pago (bool) -> false(cash)/true(transferencia)
         - pago realizado (bool)
+
+    Tabla Cuentas
+        - IdCuenta (primaryKey)
+        - IdCliente (foreignKey)
+        - IdPago (Foreign Key)
+        - IdTrastero (Foreign Key)
 
 Cliente puede tener varios Pagos 1:n
 Cliente Puede tener varios trasteros 1:n
