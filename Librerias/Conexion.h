@@ -22,7 +22,7 @@ private:
 
 public:
     // Constructor
-    ConexionDB(const string& user, const string& pass, const string& db);
+    ConexionDB(const string user, const string pass, const string db);
 
     // Destructor
     ~ConexionDB();
@@ -36,6 +36,11 @@ public:
     void cerrarConexion();
     // Devuelve el puntero a la conexión
     sql::Connection* getConexion();
+
+    //Getters
+    string getUsername();
+    string getPassword();
+    string getDatabase();
 };
 
 #endif // CONEXIONES_H
