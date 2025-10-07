@@ -1,6 +1,8 @@
 # ProyectoTrasteros
 Desarrollo de una aplicacion en Python para administrar un negocio de trasteros
 
+Enunciado:
+
 Base de Datos:
     Tabla Clientes:
         - Id
@@ -50,4 +52,6 @@ Cliente Puede tener varios trasteros 1:n
     # Importe medio de renta de trasteros = Renta Total cobrada / Num trasteros alquilados
 
 #5 UX
-    
+
+Notas:
+    - Ha sido un lio utilizar el conector de c++ a mysql por lo que he creado un .sh para automatizar la compilacion
