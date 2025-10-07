@@ -54,7 +54,7 @@ int main() {
             cout << "Opcion no valida\nPrueba de nuevo" << endl;
             break;
         }
-    }while(opcion != 2);
+    }while(opcion != 2 );
     
     
     return 0;
